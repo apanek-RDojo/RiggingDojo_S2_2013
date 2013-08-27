@@ -53,7 +53,10 @@ class Rdojo_UI:
         widgetInstance = widgetClass()
 
     def rigArm(self, *args):
-        Rig_Arm.Rig_Arm()
+        import Maya.Modules.Animation.Rig_Arm as Rig_Arm
+        reload(Rig_Arm)
+        rigArm = Rig_Arm.Rig_Arm()
+
 
     def returnWidgets(self, path, *args):
         import File_Utils as fileUtils

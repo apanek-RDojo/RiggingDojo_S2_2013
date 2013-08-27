@@ -20,6 +20,3 @@ class Example_Class:
 
 	def PrintInfo(self):
 		print "ExampleB Info"
-
-
-

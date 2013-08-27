@@ -1,5 +1,4 @@
 # ExampleC
-
 def ExampleC():
 	print 'In ExampleC'
 
