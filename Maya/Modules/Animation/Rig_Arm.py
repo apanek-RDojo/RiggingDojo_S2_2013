@@ -43,6 +43,13 @@ class Rig_Arm:
 		# Build Rig Joint_Utils
 		# Create ik from arm1 to wrist
 		# Build an ik control
+		import Maya.System.Rig_Utils as Rig_Utils
+		reload (Rig_Utils)
+		path = 'R:/Maya/Modules/Animation/Controls/SphereControl.ma'
+		attr = ('ik/fk')
+		Rig_Utils.setupControlObject(path, attr)
+
+		Rig_Utils.createIk(ikJoints[0], ikJoints[2])
 		# Parent ikHandle to ik arm control
 		# PV control
 		# Connect rig joints to fk and ik joints
